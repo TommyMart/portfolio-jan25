@@ -20,7 +20,7 @@ const Card = ({ title, description, imageSrc, repoUrl }) => {
                         {title}
                     </Heading>
                 </HStack>
-                <Image  objectFit="cover" p={2} src={imageSrc} alt={title}></Image>
+                <Image  height={"70%"} objectFit="cover" p={2} src={imageSrc} alt={title}></Image>
                 
                 <Text color="#64748b" frontsize="lg">
                     {description}
@@ -28,7 +28,7 @@ const Card = ({ title, description, imageSrc, repoUrl }) => {
                 <HStack spacing={2} alignItems={"center"}>
 
                     <Link position="absolute" bottom="10px" left="50%" 
-                    transform="translateX(-50%)" to={repoUrl}>
+                    transform="translateX(-50%)" target="_blank" href={repoUrl}>
                         <Button>Visit Repo</Button>
                     </Link>
                 </HStack>

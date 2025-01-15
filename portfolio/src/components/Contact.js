@@ -107,7 +107,11 @@ const ContactMe = () => {
           I acknowledge the Kaurna people, the original custodians of the lands
           on which this website was built, and that sovereignty was never ceded.
         </Text>
+        
       </Box>
+      <Text py={0} textAlign="center">
+            thomas.h.martin89@gmail.com
+        </Text>
             </FullScreenSection>
     )
 }
