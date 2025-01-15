@@ -1,4 +1,4 @@
-import { Heading, HStack, Image, Text, VStack } from "@chakra-ui/react";
+import { Button, Heading, HStack, Image, Link, Text, VStack } from "@chakra-ui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons"; 
 
@@ -8,21 +8,29 @@ const Card = ({ title, description, imageSrc, repoUrl }) => {
         <VStack
             color="black"
             backgroundColor="white"
-            cursor="pointer"
             borderRadius="xl"
+            p={8}
+            spacing={6} // Add spacing between items
+            alignItems="flex-start" // Align content to the left
+            height="100%" // Ensure consistent height
+            position="relative" // Parent for absolute positioning
             >
-                <Image borderRadius="xl" width="35%" src={imageSrc} alt={title}></Image>
                 <HStack justifyContent={"space-between"} alignItems={"center"}>
                     <Heading as="h3" size="md">
                         {title}
                     </Heading>
                 </HStack>
+                <Image  objectFit="cover" p={2} src={imageSrc} alt={title}></Image>
+                
                 <Text color="#64748b" frontsize="lg">
                     {description}
                 </Text>
-                <HStack spacing={2} alignItems={"ceånter"}>
-                    <p>Visit Repo</p>
-                    <a href={repoUrl}><FontAwesomeIcon icon={faArrowRight} size="1x" /></a>
+                <HStack spacing={2} alignItems={"center"}>
+
+                    <Link position="absolute" bottom="10px" left="50%" 
+                    transform="translateX(-50%)" to={repoUrl}>
+                        <Button>Visit Repo</Button>
+                    </Link>
                 </HStack>
             </VStack>
     )

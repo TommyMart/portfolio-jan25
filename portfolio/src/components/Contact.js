@@ -46,7 +46,7 @@ const ContactMe = () => {
             py={16}
             px={8}
             >
-                <VStack w="1024" p={32} alignItems="flex-start" >
+                <VStack w="1024" p={32} alignItems="center" >
                     <Heading as="h1" id="contactme-section">
                         Contact Me  
                         </Heading>
@@ -85,7 +85,7 @@ const ContactMe = () => {
                                 <Textarea
                                     id="comment"
                                     name="comment"
-
+                                    width="400px"
                                     height={250}
                                     {...formik.getFieldProps("comment")}
                                     />
