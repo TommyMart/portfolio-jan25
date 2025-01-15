@@ -9,6 +9,7 @@ import {
  Heading, 
  Input, 
  Select, 
+ Text, 
  Textarea, 
  VStack, 
 } from "@chakra-ui/react"; 
@@ -43,10 +44,10 @@ const ContactMe = () => {
         <FullScreenSection
             isDarkBackground
             backgroundColor="#512DA8"
-            py={16}
+            py={8}
             px={8}
             >
-                <VStack w="1024" p={32} alignItems="center" >
+                <VStack w="1024" p={32} pb={0} alignItems="center" >
                     <Heading as="h1" id="contactme-section">
                         Contact Me  
                         </Heading>
@@ -97,8 +98,16 @@ const ContactMe = () => {
                             width="full"
                             >Submit</Button>
                         </form>
+
                     </Box>
+                    
                 </VStack>
+                <Box display="flex" justifyContent="center" px={8} py={4}>
+        <Text py={0} textAlign="center" maxW="600px">
+          I acknowledge the Kaurna people, the original custodians of the lands
+          on which this website was built, and that sovereignty was never ceded.
+        </Text>
+      </Box>
             </FullScreenSection>
     )
 }
