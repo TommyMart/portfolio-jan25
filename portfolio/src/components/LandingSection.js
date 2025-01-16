@@ -54,7 +54,7 @@ const LandingSection = () => {
 
 I didn’t grow up with computers, but over the past year, I’ve become deeply fascinated with the world of technology. What started as a curiosity turned into a passion that drives me to spend every moment learning, building, and experimenting. From coding challenges to full-stack projects, I’ve immersed myself in this incredible field, constantly pushing myself to grow and improve. <br/><br/>
 
-This portfolio showcases my journey so far, highlighting the projects I’ve created and the skills I’ve developed along the way. Each piece represents not just a technical achievement but also my dedication to problem-solving, creativity, and continuous learning. <br/><br/>
+This portfolio showcases my journey so far, highlighting a few of the projects I’ve created thus far, and the skills I’ve developed along the way. Each piece represents not just a technical achievement but also my dedication to problem-solving, creativity, and continuous learning. <br/><br/>
 
 Thank you for visiting, and I hope my work inspires you as much as this journey has inspired me!"
        
