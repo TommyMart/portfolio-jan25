@@ -38,17 +38,17 @@ const LandingSection = () => {
         {iconDelay2 && <DisplayIcons />}
         <DisplayIcons />
         
-        <Avatar position="relative" mt={118} zIndex={10} className="expand2 glow" src={"/IMG_0900.jpeg"} width={300} height={300}/>
-        <VStack pt={16} pb={4}>
+        <Avatar position="relative" mt={{ base: 32, md: 28 }} zIndex={10} className="expand2 avatar" src={"/IMG_0900.jpeg"} width={{ base: 150, md: 300}} height={{ base: 150, md: 300}}/>
+        <VStack pt={16} pb={8}>
             <h1 position="relative" zIndex={10}>{greeting}</h1>
-            <Heading position="relative" zIndex={10} className="expand2" >{bio1}</Heading>
+            <Heading fontSize={{ base: "lg", md: "2xl" }} position="relative" zIndex={10} className="expand2" >{bio1}</Heading>
             <DisplayIcons />
         </VStack>
-        <AudioIntro pt={0}/>
+        {/* <AudioIntro /> */}
         <DisplayIcons />
         <Button position="relative" zIndex={10} colorScheme="purple" 
         onClick={() => setShowTranscription(!showTranscription)}>
-            Transcription</Button>
+            Introduction</Button>
         {showTranscription && (<Text py={10} width="60%" textAlign={"center"}>
         "Hi 👋, my name's Tom and welcome to my Portfolio Website! <br/><br/>
 

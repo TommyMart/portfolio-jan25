@@ -7,6 +7,8 @@ import FullScreenSection from "./FullScreenSection";
 import Card from "./Card";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons"; 
+import DisplayIcons from "./iconDisplay";
+import { useEffect, useState } from "react";
 
 const projects = [
     {
@@ -36,6 +38,21 @@ const projects = [
 ]
 
 const Projects = () => {
+    const [iconDelay1, setIconDelay1] = useState(false);
+    const [iconDelay2, setIconDelay2] = useState(false);
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setIconDelay1(true);
+        }, 1300)
+    }, [])
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setIconDelay2(true);
+        }, 2300)
+    }, [])
+
     return (
         <FullScreenSection
             backgroundColor={"black"}
@@ -45,29 +62,34 @@ const Projects = () => {
             alignItems={"flex-start"}
             spacing={8}
             >
+
+            {iconDelay1 && <DisplayIcons />}
+            {iconDelay2 && <DisplayIcons />}
+            <DisplayIcons />
+
                 <Heading as="h1" id="projects-section">
                     Featured Projects
                 </Heading>
                 <Box 
                     display="grid"
-                    gridTemplateColumns="repeat(2, minmax(0, 1fr))"
+                    gridTemplateColumns={{ base: "repeat(1, minmax(0, 1fr))", md: "repeat(2, minmax(0, 1fr))"}}
                     gridGap={8}
                     
                     >
                 {projects.map((project) => (
                     
-                        <Card
+                    <Card
                         key={project.title}
                         title={project.title}
                         description={project.description}
                         repoUrl={project.repoUrl}
                         imageSrc={project.imageSrc}
-                        />
+                    />
                     
                 ))}
                 </Box>
                 <Link href="https://github.com/TommyMart" isExternal>
-                <Heading as={"h6"} size={"lg"} >View more projects here 
+                <Heading as={"h6"} size={{ base: "md", md: "lg"}} >View more projects here 
                     <FontAwesomeIcon icon={faArrowRight} style={{ marginLeft: "8px" }}></FontAwesomeIcon>
                 </Heading></Link>
             </FullScreenSection>

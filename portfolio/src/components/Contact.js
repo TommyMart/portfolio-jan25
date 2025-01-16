@@ -1,4 +1,4 @@
-import React, {useEffect} from "react"; 
+import React, {useEffect, useState} from "react"; 
 import { useFormik } from "formik"; 
 import { 
  Box, 
@@ -18,11 +18,25 @@ import * as Yup from 'yup';
 import emailjs from "@emailjs/browser";
 import FullScreenSection from "./FullScreenSection"; 
 import Transcription from "./transcription";
+import DisplayIcons from "./iconDisplay";
 
 
 
 const ContactMe = () => {
-    
+    const [iconDelay1, setIconDelay1] = useState(false);
+    const [iconDelay2, setIconDelay2] = useState(false);
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setIconDelay1(true);
+        }, 1700)
+    }, [])
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setIconDelay2(true);
+        }, 2700)
+    }, [])
 
     const formik = useFormik({
         initialValues: {
@@ -72,6 +86,10 @@ const ContactMe = () => {
             py={8}
             px={8}
             >
+            {iconDelay1 && <DisplayIcons />}
+            {iconDelay2 && <DisplayIcons />}
+            <DisplayIcons /> 
+
                 <VStack w="1024" p={32} pb={0} alignItems="center" >
                     <Heading as="h1" id="contactme-section">
                         Contact Me  
