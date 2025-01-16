@@ -7,6 +7,7 @@ import {
  FormErrorMessage, 
  FormLabel, 
  Heading, 
+ HStack, 
  Input, 
  Select, 
  Text, 
@@ -16,6 +17,7 @@ import {
 import * as Yup from 'yup'; 
 import emailjs from "@emailjs/browser";
 import FullScreenSection from "./FullScreenSection"; 
+import Transcription from "./transcription";
 
 
 
@@ -100,8 +102,12 @@ const ContactMe = () => {
                             <FormControl>
                                 <FormLabel htmlFor="type">Type of enquiry</FormLabel>
                                 <Select id="type" name="type" {...formik.getFieldProps("type")} >
-                                    <option value="hireMe">Freelance proposal</option>
                                     <option value="other">Other...</option>
+                                    <option value="hireMe">Say Hi 👋</option>
+                                    <option value="hireMe">Cool idea 😮‍💨</option>
+                                    <option value="hireMe">Exployment 🦾</option>
+                                    <option value="hireMe">Freelance proposal 🎯</option>
+                                    
                                     </Select>
                             </FormControl>
                             <FormControl isInvalid={!!formik.errors.comment && formik.touched.comment}>
@@ -115,25 +121,28 @@ const ContactMe = () => {
                                     />
                                 <FormErrorMessage>{formik.errors.comment}</FormErrorMessage>
                             </FormControl>
+                            <HStack>
                             <Button 
                             type="submit"
                             colorScheme="purple"
-                            width="full"
+                            width="50%"
                             >Submit</Button>
+                            <Transcription setFieldValue={formik.setFieldValue} />
+                            </HStack>
                         </form>
 
                     </Box>
                     
                 </VStack>
                 <Box display="flex" justifyContent="center" px={8} py={4}>
-        <Text py={0} textAlign="center" maxW="600px">
+        <Text py={0} px={16} textAlign="center" maxW="50%">
           I acknowledge the Kaurna people, the original custodians of the lands
           on which this website was built, and that sovereignty was never ceded.
         </Text>
         
       </Box>
       <Text py={0} textAlign="center">
-      • thomas.h.martin89@gmail.com •
+        thomas.h.martin89@gmail.com
         </Text>
         <Text className="expand3">❤️</Text>
             </FullScreenSection>

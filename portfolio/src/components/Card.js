@@ -1,5 +1,7 @@
 import { Button, Heading, HStack, Image, Link, Text, VStack } from "@chakra-ui/react";
 import "../styles/expand.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 
 
@@ -18,7 +20,7 @@ const Card = ({ title, description, imageSrc, repoUrl }) => {
             >
                 <HStack justifyContent={"space-between"} alignItems={"center"}>
                     <Heading as="h3" size="md">
-                        {title}
+                        ⭐️  {title}
                     </Heading>
                 </HStack>
                 <Image  height={"70%"} objectFit="cover" p={2} src={imageSrc} alt={title}></Image>
@@ -31,7 +33,7 @@ const Card = ({ title, description, imageSrc, repoUrl }) => {
                     <Link position="absolute" bottom="10px" left="50%" 
                     transform="translateX(-50%)" target="_blank" href={repoUrl}
                     >
-                        <Button >Visit Repo</Button>
+                        <Button><FontAwesomeIcon icon={faGithub} style={{ marginRight: "7px" }}/>View Repository</Button>
                     </Link>
                 </HStack>
             </VStack>

@@ -67,7 +67,7 @@ const Projects = () => {
                 ))}
                 </Box>
                 <Link href="https://github.com/TommyMart" isExternal>
-                <Heading as={"h6"} size={"lg"} >And more here 
+                <Heading as={"h6"} size={"lg"} >View more projects here 
                     <FontAwesomeIcon icon={faArrowRight} style={{ marginLeft: "8px" }}></FontAwesomeIcon>
                 </Heading></Link>
             </FullScreenSection>
