@@ -1,10 +1,12 @@
- import { Box, Heading } from "@chakra-ui/react";
+ import { Box, Heading, Link } from "@chakra-ui/react";
 import surveyBuddyImg from "../images/surveyBuddyImg.png";
 import musicTutorial from "../images/chatbot.png";
 import quizNight from "../images/highscores.png";
 import api from "../images/api.png";
 import FullScreenSection from "./FullScreenSection";
 import Card from "./Card";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons"; 
 
 const projects = [
     {
@@ -64,6 +66,10 @@ const Projects = () => {
                     
                 ))}
                 </Box>
+                <Link href="https://github.com/TommyMart" isExternal>
+                <Heading as={"h6"} size={"lg"} >And more here 
+                    <FontAwesomeIcon icon={faArrowRight} style={{ marginLeft: "8px" }}></FontAwesomeIcon>
+                </Heading></Link>
             </FullScreenSection>
     );
 };

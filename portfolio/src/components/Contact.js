@@ -14,6 +14,7 @@ import {
  VStack, 
 } from "@chakra-ui/react"; 
 import * as Yup from 'yup'; 
+import emailjs from "@emailjs/browser";
 import FullScreenSection from "./FullScreenSection"; 
 
 
@@ -28,8 +29,30 @@ const ContactMe = () => {
             type: "hireMe",
             comment: "",
         },
-        onSubmit: (values) => {
-            console.log("submitted")
+        onSubmit: (values, { resetForm }) => {
+
+            emailjs
+                .send(
+                'service_wg8j5py', 
+                'template_8rvxt36',
+                {
+                    from_name: values.firstName,
+                    from_email: values.email,
+                    type: values.type,
+                    message: values.comment,
+                }, 
+                'vOclEW_YSx6dM_1Fi'
+                )
+                .then(() => {
+                    alert("Your message has been sent successfully!");
+                    resetForm();
+                },
+            (error) => {
+                console.log("Message failed to send.", error);
+                alert("Failed to send the message. Please try again later.");
+            })
+                
+      
         },
         validationSchema: Yup.object({
             firstName: Yup.string().required("Required"), 
@@ -110,8 +133,9 @@ const ContactMe = () => {
         
       </Box>
       <Text py={0} textAlign="center">
-            thomas.h.martin89@gmail.com
+      • thomas.h.martin89@gmail.com •
         </Text>
+        <Text className="expand3">❤️</Text>
             </FullScreenSection>
     )
 }

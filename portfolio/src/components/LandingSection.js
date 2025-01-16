@@ -14,10 +14,10 @@ const LandingSection = () => {
         backgroundColor="#512DA8"
     >
         
-        <Avatar src={"/IMG_0900.jpeg"} width={300} height={300}/>
+        <Avatar className="expand2" src={"/IMG_0900.jpeg"} width={300} height={300}/>
         <VStack py={20}>
             <h1>{greeting}</h1>
-            <Heading>{bio1}</Heading>
+            <Heading className="expand2" >{bio1}</Heading>
             
         </VStack>
     </FullScreenSection>

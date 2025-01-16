@@ -1,6 +1,6 @@
 import { Button, Heading, HStack, Image, Link, Text, VStack } from "@chakra-ui/react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons"; 
+import "../styles/expand.css";
+
 
 
 const Card = ({ title, description, imageSrc, repoUrl }) => {
@@ -10,6 +10,7 @@ const Card = ({ title, description, imageSrc, repoUrl }) => {
             backgroundColor="white"
             borderRadius="xl"
             p={8}
+            className="expand"
             spacing={6} // Add spacing between items
             alignItems="flex-start" // Align content to the left
             height="100%" // Ensure consistent height
@@ -28,12 +29,13 @@ const Card = ({ title, description, imageSrc, repoUrl }) => {
                 <HStack spacing={2} alignItems={"center"}>
 
                     <Link position="absolute" bottom="10px" left="50%" 
-                    transform="translateX(-50%)" target="_blank" href={repoUrl}>
-                        <Button>Visit Repo</Button>
+                    transform="translateX(-50%)" target="_blank" href={repoUrl}
+                    >
+                        <Button >Visit Repo</Button>
                     </Link>
                 </HStack>
             </VStack>
     )
-}
+};
 
 export default Card;

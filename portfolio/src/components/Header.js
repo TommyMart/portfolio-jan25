@@ -90,17 +90,17 @@ const Header = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <FontAwesomeIcon icon={icon} size="2x" key={url} />
+                  <FontAwesomeIcon className="expand2" icon={icon} size="2x" key={url} />
                 </a>
               ))}
             </HStack>
           </nav>
           <nav>
             <HStack spacing={8}>
-              <a href="#projects" onClick={handleClick("projects")}>
+              <a className="expand2" href="#projects" onClick={handleClick("projects")}>
                 Projects
               </a>
-              <a href="#contactme" onClick={handleClick("contactme")}>
+              <a className="expand2" href="#contactme" onClick={handleClick("contactme")}>
                 Contact Me
               </a>
             </HStack>
