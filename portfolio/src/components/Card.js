@@ -2,10 +2,11 @@ import { Button, Heading, HStack, Image, Link, Text, VStack } from "@chakra-ui/r
 import "../styles/expand.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faCloud } from "@fortawesome/free-solid-svg-icons";
 
 
 
-const Card = ({ title, description, imageSrc, repoUrl }) => {
+const Card = ({ title, description, imageSrc, repoUrl, technologies, website }) => {
     return (
         <VStack
             color="black"
@@ -23,18 +24,22 @@ const Card = ({ title, description, imageSrc, repoUrl }) => {
                         ⭐️  {title}
                     </Heading>
                 </HStack>
+                <Heading mb={0} pl={2} as={"h6"} size={"sm"}>{technologies}</Heading>
                 <Image  height={"70%"} objectFit="cover" p={2} src={imageSrc} alt={title}></Image>
                 
                 <Text color="#64748b" frontsize="lg">
                     {description}
                 </Text>
-                <HStack spacing={2} alignItems={"center"}>
+                <HStack spacing={2} >
 
-                    <Link position="absolute" bottom="10px" left="50%" 
-                    transform="translateX(-50%)" target="_blank" href={repoUrl}
+                    <Link py={0} bottom="0"  target="_blank" href={repoUrl}
                     >
-                        <Button><FontAwesomeIcon icon={faGithub} style={{ marginRight: "7px" }}/>View Repository</Button>
+                        <Button ><FontAwesomeIcon icon={faGithub} style={{ marginRight: "7px" }}/>View Repository</Button>
                     </Link>
+                    {website && (<Link py={0} bottom="0"  target="_blank" href={website}
+                    >
+                        <Button ><FontAwesomeIcon icon={faCloud} style={{ marginRight: "7px" }}/>View Website</Button>
+                    </Link>)}
                 </HStack>
             </VStack>
     )

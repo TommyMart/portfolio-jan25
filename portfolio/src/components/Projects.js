@@ -16,24 +16,32 @@ const projects = [
         description: "SurveyBuddy is a user-friendly full-stack web application that streamlines survey creation, sharing, and data collection while offering intuitive data visualisation through charts and graphs.",
         imageSrc: surveyBuddyImg,
         repoUrl: "https://github.com/Survey-Buddy",
+        technologies: "MongoDB, Express, React, Node.JS",
+        website: "https://surveybuddy.tech/"
     },
     {
         title: "Music Tutorial ChatBot",
         description: "Music Tutorial ChatBot is an innovative platform recently built under time constraints for a hackathon, it is designed to help users enhance their music production skills in a variety of popular genres.",
         imageSrc: musicTutorial,
         repoUrl: "https://github.com/TommyMart/music-chat-bot",
+        technologies: "React, Express, Node.JS, OpenAI",
+        website: "https://electronic-music-tutorial.netlify.app/"
     },
     {
         title: "RESTful API Webserver",
         description: "One of my notable projects, was my introduction to backend development and working with APIs. I built a RESTful API web server using Python, Flask, SQLAlchemy, and PostgreSQL, where user information is authorised via JWT and securely hashed using Bcrypt.",
         imageSrc: api,
         repoUrl: "https://github.com/TommyMart/Event_CommsAndTicketing_API",
+        technologies: "Python, Flask, SQLAlchemy, PostgreSQL",
+        website: null,
     },
     {
         title: "Terminal Quiz Night",
         description: "As part of a Term 1 assignment, I built a fully functional quiz night terminal application using Python, Bash scripting, and rich styling for an enhanced user experience.",
         imageSrc: quizNight,
         repoUrl: "https://github.com/TommyMart/QuizNight_Terminal_App",
+        technologies: "Python and Bash Scripting",
+        website: null,
     }
 ]
 
@@ -84,6 +92,8 @@ const Projects = () => {
                         description={project.description}
                         repoUrl={project.repoUrl}
                         imageSrc={project.imageSrc}
+                        technologies={project.technologies}
+                        website={project.website}
                     />
                     
                 ))}
