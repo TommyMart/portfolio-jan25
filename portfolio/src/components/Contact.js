@@ -153,7 +153,7 @@ const ContactMe = () => {
                     
                 </VStack>
                 <Box display="flex" justifyContent="center" px={8} py={4}>
-        <Text py={0} px={16} textAlign="center" maxW="50%">
+        <Text py={0} px={16} textAlign="center" maxW={{ base: "90%", md: "50%"}}>
           I acknowledge the Kaurna people, the original custodians of the lands
           on which this website was built, and that sovereignty was never ceded.
         </Text>
