@@ -9,6 +9,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons"; 
 import DisplayIcons from "./iconDisplay";
 import { useEffect, useState } from "react";
+import pokemon from "../images/pokemon.png";
+import portfolio from "../images/reactportfolio.png";
 
 const projects = [
     {
@@ -42,6 +44,22 @@ const projects = [
         repoUrl: "https://github.com/TommyMart/QuizNight_Terminal_App",
         technologies: "Python and Bash Scripting",
         website: null,
+    },
+    {
+        title: "Portfolio 1.0",
+        description: "This portfolio website, developed using React, showcases my expertise in modern web development. It leverages powerful tools such as React Scroll, React Router, EmailJS, and hooks to create a seamless and interactive user experience.",
+        imageSrc: portfolio,
+        repoUrl: "https://github.com/TommyMart/react-portfolio",
+        technologies: "React",
+        website: "https://main--tommartin-portfolio.netlify.app/",
+    },
+    {
+        title: "Pokemon API Game",
+        description: "Dive into the exciting world of my Pokemon Browser Game, built with JavaScript and the Pokemon API. In this interactive web application, players can catch Pokemon that appear on the screen using their Pokemon ball cursor, aiming for a high score.",
+        imageSrc: pokemon,
+        repoUrl: "https://github.com/TommyMart/Catch-A-Pokemon-",
+        technologies: "JavaScript and Pokemon API",
+        website: "https://catch-a-pokemon.netlify.app/",
     }
 ]
 
