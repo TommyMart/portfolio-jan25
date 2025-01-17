@@ -7,15 +7,15 @@ import { Box, HStack } from "@chakra-ui/react";
 const socials = [
   {
     icon: faEnvelope,
-    url: "mailto: hello@example.com",
+    url: "mailto: thomas.h.martin89@gmail.com",
   },
   {
     icon: faGithub,
-    url: "https://www.github.com/sureskills",
+    url: "https://github.com/TommyMart",
   },
   {
     icon: faLinkedin,
-    url: "https://www.linkedin.com/in/sureskills/",
+    url: "https://www.linkedin.com/in/thomashenrymartin/",
   },
 ];
 
